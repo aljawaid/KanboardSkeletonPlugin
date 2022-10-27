@@ -1,16 +1,15 @@
-# `plugin name`
+# `Plugin Name`
 
-### _Plugin for Kanboard_
+#### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-`intro`
-
-Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")
+`Brief intro`
 
 
 Features
 -------------
 
-- 
+- main features list 
+- main features list
 
 
 Screenshots
@@ -20,24 +19,26 @@ Screenshots
 
 ![Screenshot Name](../master/screenshot-name.png "Read Screenshot Name")
 
+Usage
+-------------
 
-Translations
-------------
-
-- English (UK)
-- _Contributors welcome_
-
+`Usage instructions`
 
 Compatibility
 -------------
 
 - Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 
+#### Other Plugins & Action Plugins
+- _No known issues_
+#### Core Files & Templates
+- `01` Template override
+- _No database changes_
 
 Changelog
 ---------
 
-[**Full Changelog**](../master/changelog.md "See changes")
+Read the full [**Changelog**](../master/changelog.md "See changes")
  
 
 Installation
@@ -62,6 +63,13 @@ _Note: Plugin folder is case-sensitive._
 
 **_or_**
 - git clone (_or ftp upload_) and extract the `.zip` into this folder: `.\plugins\` (must be exact case)
+
+
+Translations
+------------
+
+- English (UK)
+- _Contributors welcome_
 
 
 Authors & Contributors
