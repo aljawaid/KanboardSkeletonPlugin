@@ -22,7 +22,7 @@ Screenshots
 Usage
 -------------
 
-`Usage instructions`
+Go to `Settings` &#10562;
 
 Compatibility
 -------------
@@ -62,7 +62,7 @@ Installation
 _Note: Plugin folder is case-sensitive._
 
 **_or_**
-- git clone (_or ftp upload_) and extract the `.zip` into this folder: `.\plugins\` (must be exact case)
+- `git clone` (_or ftp upload_) and extract the `.zip` into this folder: `.\plugins\` (must be exact case)
 
 
 Translations
