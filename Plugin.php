@@ -37,6 +37,7 @@ class Plugin extends Base
 
     public function getPluginName()
     {
+        // Name MUST be identical to namespace for Plugin Directory to detect updated versions
         return 'Plugin Name';
     }
 
