@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\PluginNameExampleStudlyCaps;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+// use Kanboard\Plugin\PluginNameExampleStudlyCaps\AgeHelper;  // Helper Class and Filename should be exact
 
 class Plugin extends Base
 {
@@ -28,6 +29,10 @@ class Plugin extends Base
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'myAction', 'myplugin');
         $this->route->addRoute('/settings/support', 'TechnicalSupportController', 'show', 'KanboardSupport');
+
+        // Helper
+        //  - Example: $this->helper->register('helperClassNameCamelCase', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\HelperNameExampleStudlyCaps');
+        $this->helper->register(' ', '\Kanboard\Plugin\  \Helper\  ');
     }
 
     public function onStartup()
