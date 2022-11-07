@@ -75,7 +75,7 @@ Translations
 Authors & Contributors
 ----------------------
 
-[- @aljawaid](https://github.com/aljawaid) - Author
+- [@aljawaid](https://github.com/aljawaid) - Author
 - _Contributors welcome_
 
 License
