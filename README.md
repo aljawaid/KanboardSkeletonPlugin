@@ -55,7 +55,7 @@ Installation
 
 **_or_**
 
-- **Install via [GitHub](https://github.com/aljawaid "Find the correct plugin from the list of repositories")**
+- **Install via [GitHub](https://github.com/url "Find the correct plugin from the list of repositories")**
 - Download the `.zip` file and decompress everything under the directory `plugins`
  - The `.zip` folder must not contain any branch names and must be exact case matching the plugin name
 
@@ -75,9 +75,9 @@ Translations
 Authors & Contributors
 ----------------------
 
-- [@aljawaid](https://github.com/aljawaid) - Author
+- [name](https://github.com/url) - Author
 - _Contributors welcome_
 
 License
 -------
-- This project is distributed under [The MIT License](../master/LICENSE "Read The MIT license")
+- This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
