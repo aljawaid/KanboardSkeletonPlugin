@@ -45,7 +45,8 @@ Installation
 ------------
 
 - **Install via [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
-  - _Go to_ Kanboard: `Settings` &#10562; `Plugins` &#10562; `Plugin Directory`
+  - _Go to_ Kanboard: `Plugins` &#10562; `Plugin Directory`
+    - or with [PluginManager](https://github.com/aljawaid/PluginManager) installed: Kanboard: `Settings` &#10562; `Plugins` &#10562; `Plugin Directory`
 
 **_or_**
 
@@ -59,7 +60,7 @@ Installation
 - Download the `.zip` file and decompress everything under the directory `/plugins`
  - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
 
-_Note: The `/plugin` folder is case-sensitive._
+_Note: The `/plugins` folder is case-sensitive._
 
 **_or_**
 
