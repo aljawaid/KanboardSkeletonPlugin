@@ -66,6 +66,7 @@ _Note: The `/plugins` folder is case-sensitive._
 
 **_or_**
 
+- **Install using Git CLI**
 - `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
 
 
