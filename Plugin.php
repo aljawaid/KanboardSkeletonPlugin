@@ -53,7 +53,7 @@ class Plugin extends Base
 
     public function getPluginAuthor()
     {
-        return 'aljawaid';
+        return ' ';
     }
 
     public function getPluginVersion()
@@ -72,6 +72,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/aljawaid/url';
+        return 'https://github.com/ /url';
     }
 }
