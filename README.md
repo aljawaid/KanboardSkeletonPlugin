@@ -19,10 +19,12 @@ Screenshots
 
 ![Screenshot Name](../master/screenshot-name.png "Read Screenshot Name")
 
+
 Usage
 -------------
 
 Go to `Settings` &#10562;
+
 
 Compatibility
 -------------
@@ -34,6 +36,7 @@ Compatibility
 #### Core Files & Templates
 - `01` Template override
 - _No database changes_
+
 
 Changelog
 ---------
@@ -53,21 +56,21 @@ Installation
 **_or_**
 
 - **Install via the [Releases](../master/Releases/ "A copy of each release is saved in the folder") folder**
- - A copy of each release is saved in the `/Releases` folder of the repository
- - Simply extract the `.zip` file into the `/plugins` directory
+  - A copy of each release is saved in the `/Releases` folder of the repository
+  - Simply extract the `.zip` file into the `/plugins` directory
 
 **_or_**
 
 - **Install via [GitHub](https://github.com/url "Find the correct plugin from the list of repositories")**
-- Download the `.zip` file and decompress everything under the directory `/plugins`
- - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
+  - Download the `.zip` file and decompress everything under the directory `/plugins`
+  - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
 
 _Note: The `/plugins` folder is case-sensitive._
 
 **_or_**
 
 - **Install using Git CLI**
-- `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
+  - `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
 
 
 Translations
@@ -82,6 +85,7 @@ Authors & Contributors
 
 - [name](https://github.com/url) - Author
 - _Contributors welcome_
+
 
 License
 -------
