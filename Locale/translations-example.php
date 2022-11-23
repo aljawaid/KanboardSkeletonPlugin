@@ -9,6 +9,9 @@
 <!-- REMOVE THIS SECTION -->
 <?php
 return array(
+  //
+  // GENERAL
+  //
   '' => '',
   '' => '',
   '' => '',
