@@ -61,7 +61,7 @@ Installation
 
 **_or_**
 
-- **Install via [GitHub](https://github.com/url "Find the correct plugin from the list of repositories")**
+- **Install via [GitHub](https://github.com/aljawaid "Find the correct plugin from the list of repositories")**
   - Download the `.zip` file and decompress everything under the directory `/plugins`
   - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
 
@@ -83,7 +83,7 @@ Translations
 Authors & Contributors
 ----------------------
 
-- [name](https://github.com/url) - Author
+- [@aljawaid](https://github.com/aljawaid) - Author
 - _Contributors welcome_
 
 
