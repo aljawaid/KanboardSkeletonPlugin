@@ -29,13 +29,15 @@ class Plugin extends Base
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         //  - Example for menu item in kanboard settings page: $this->template->hook->attach('template:config:sidebar', 'pluginNameExampleCamelCase:config/sidebar');
+
         // Extra Page - Routes
-        //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'myAction', 'PluginNameExampleStudlyCaps');
+        //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('/ / ', ' ', ' ', 'PluginNameExampleStudlyCaps');
 
         // Helper
         //  - Example: $this->helper->register('helperClassNameCamelCase', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\HelperNameExampleStudlyCaps');
+        //  - Add each Helper in the 'use' section at the top of this file
         $this->helper->register(' ', '\Kanboard\Plugin\  \Helper\  ');
     }
 
@@ -47,6 +49,7 @@ class Plugin extends Base
     public function getPluginName()
     {
         // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions
+        // Do not translate the plugin name here
         return 'PluginNameExampleStudlyCaps';
     }
 
