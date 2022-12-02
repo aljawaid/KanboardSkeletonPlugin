@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\PluginNameExampleStudlyCaps;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 // use Kanboard\Plugin\PluginNameExampleStudlyCaps\AgeHelper;  // Helper Class and Filename should be exact
+// use Kanboard\Helper;  // Add core Helper for using forms etc. inside external templates
 
 class Plugin extends Base
 {
