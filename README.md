@@ -8,8 +8,8 @@
 Features
 -------------
 
-- main features list 
-- main features list
+- `main features list`
+- `main features list`
 
 
 Screenshots
@@ -17,7 +17,7 @@ Screenshots
 
 **title**  
 
-![Screenshot Name](../master/screenshot-name.png "Read Screenshot Name")
+![Screenshot Name](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
 
 
 Usage
