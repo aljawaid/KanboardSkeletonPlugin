@@ -76,9 +76,8 @@ _Note: The `/plugins` folder is case-sensitive._
 Translations
 ------------
 
-- English (UK)
 - _Contributors welcome_
-
+- _Starter template available_
 
 Authors & Contributors
 ----------------------
