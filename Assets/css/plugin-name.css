@@ -13,16 +13,17 @@
     --pp-green: #2EA02E;
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
-    --border-radius: 3px;
+    --blue-icon-dark: #034CA6;
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
     --blue-border-gradient-match: #476E9E;
-    --header-page-margin: 5px 15px 10px 15px;
-    --page-margin: 0px 15px 0px 15px;
-    --title-margin: 0px 15px 0px 15px;
     --button-background-delete: #D05C84;
     --link-color-primary: #36C;
-    --blue-icon-dark: #034CA6;
-    --panel-background: #EEEEEE;
+    --header-page-margin-ksp: 5px 15px 10px 15px;
+    --page-margin-ksp: 0px 15px 0px 15px;
+    --title-margin-ksp: 0px 15px 0px 15px;
+    --border-radius-ksp: 3px;
+    --panel-background-ksp: #EEEEEE;
+    --transition-ksp: ease-in-out all .3s;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -38,13 +39,13 @@
 .pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, figure {
-    transition: ease-in-out all .3s;
+a, details, summary, i, img, table, tr, svg, figure, button {
+    transition: var(--transition-ksp);
 }
 
 a:hover { color: var(--pp-red-alt-2) !important; }
 
-.display-none, .d-none { display: none !important;}
+.display-none, .d-none { display: none !important; }
 
 .font-weight-bold { font-weight: bold; }
 
