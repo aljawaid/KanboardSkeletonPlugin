@@ -39,11 +39,8 @@
 .pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, figure {
-    transition: ease-in-out all .3s;
 a, details, summary, i, img, table, tr, svg, figure, button {
     transition: var(--transition-ksp);
->>>>>>> cfe0cb4 (Fix and Add Transition Variable)
 }
 
 a:hover { color: var(--pp-red-alt-2) !important; }
