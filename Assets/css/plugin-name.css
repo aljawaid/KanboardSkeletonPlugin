@@ -23,6 +23,7 @@
     --title-margin-ksp: 0px 15px 0px 15px;
     --border-radius-ksp: 3px;
     --panel-background-ksp: #EEEEEE;
+    --transition-ksp: ease-in-out all .3s;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -40,6 +41,9 @@
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, figure {
     transition: ease-in-out all .3s;
+a, details, summary, i, img, table, tr, svg, figure, button {
+    transition: var(--transition-ksp);
+>>>>>>> cfe0cb4 (Fix and Add Transition Variable)
 }
 
 a:hover { color: var(--pp-red-alt-2) !important; }
