@@ -85,7 +85,7 @@ Go to `Settings` &#10562;
 <details>
     <summary><strong>Compatibility</strong></summary>
 
-- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.32`
 - **Other Plugins & Action Plugins**
   - _No known issues_
 - **Core Files & Templates**
