@@ -32,8 +32,11 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CSS_FILE_NAME: .stylelintrc.json
+          LINTER_RULES_PATH: .github/linters
           IGNORE_GITIGNORED_FILES: true
           SUPPRESS_POSSUM: true
+          VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_GITLEAKS: true
           VALIDATE_JSON: true
