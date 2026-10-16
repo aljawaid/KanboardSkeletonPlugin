@@ -1,33 +1,31 @@
 <?php
 
+/**
+ * Displays the working example settings page supplied by the plugin template.
+ *
+ * Related view: Template/settings/show.php.
+ * Related regression test: tests/TemplateCompatibilityTest.php.
+ */
+
 namespace Kanboard\Plugin\PluginNameExampleStudlyCaps\Controller;
 
-use Kanboard\Controller\BaseController;
-use Kanboard\Core\Plugin\Directory;
+use Kanboard\Controller\PluginController;
 
-/**
- * Plugin PluginNameExampleStudlyCaps
- *
- * Class MyController
- * @package  Kanboard\Controller
- * @author
- */
-class MyController extends \Kanboard\Controller\PluginController
+class MyController extends PluginController
 {
     /**
-     * Display the Settings Page
-     * Use this function to create a page showing your template content.
-     * This function must be checked with 'Views - Add Menu Item - Template Hook' in Plugin.php
-     * This function must be checked with 'Extra Page - Routes' in Plugin.php
-     * Use: $this->helper->layout->config for config settings menu sidebar
-     * Use: $this->helper->layout->plugin for plugin menu sidebar
+     * Render the example inside Kanboard's settings layout.
      *
-     * @access public
+     * Use layout->plugin() instead when the finished page belongs in the plugin's
+     * own navigation rather than the main settings area.
      */
     public function show()
     {
-        $this->response->html($this->helper->layout->config('pluginNameExampleCamelCase:folder/filename', array(
-            'title' => e('Settings %s PluginNameExampleStudlyCaps', ' &#10562; '),
-        )));
+        $this->response->html($this->helper->layout->config(
+            'pluginNameExampleStudlyCaps:settings/show',
+            array(
+                'title' => t('Plugin settings example'),
+            )
+        ));
     }
 }

@@ -1,45 +1,58 @@
 <?php
 
+/**
+ * Registers the safe, working examples supplied by the Kanboard plugin template.
+ *
+ * Related regression tests: tests/PluginCompatibilityTest.php and
+ * tests/TemplateCompatibilityTest.php.
+ */
+
 namespace Kanboard\Plugin\PluginNameExampleStudlyCaps;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-// use Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\MyHelper;  // Helper Class and Filename should be exact
-// use Kanboard\Helper;  // Add core Helper for using forms etc. inside external templates
 
 class Plugin extends Base
 {
     public function initialize()
     {
-        // Template Override
-        //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
-        $this->template->setTemplateOverride('action/index', 'pluginNameExampleCamelCase:action/index');
+        // Load only assets used by the included example settings page.
+        $this->hook->on('template:layout:css', array(
+            'template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/plugin-name.css',
+        ));
 
-        // CSS - Asset Hook
-        //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/plugin-name.css'));
+        // Enable JavaScript only after the plugin needs client-side behaviour.
+        // $this->hook->on('template:layout:js', array(
+        //     'template' => 'plugins/PluginNameExampleStudlyCaps/Assets/js/plugin-name.js',
+        // ));
 
-        // JS - Asset Hook
-        //  - Keep filename lowercase
-        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/js/plugin-name.js'));
+        // Register only routes with an existing controller action and template.
+        $this->route->addRoute(
+            '/plugin-name-example/settings',
+            'MyController',
+            'show',
+            'PluginNameExampleStudlyCaps'
+        );
 
-        // Views - Template Hook
-        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        $this->template->hook->attach('template:project-header:view-switcher-before-project-overview', 'pluginNameExampleCamelCase:project_header/actions');
+        // Register helpers under a unique camelCase name to avoid collisions.
+        $this->helper->register(
+            'myHelper',
+            '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\MyHelper'
+        );
 
-        // Views - Add Menu Item - Template Hook
-        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        //  - Example for menu item in kanboard settings page: $this->template->hook->attach('template:config:sidebar', 'pluginNameExampleCamelCase:config/sidebar');
+        // Template overrides affect core screens globally. Enable an override only
+        // after its replacement template exists and has a focused regression test.
+        // $this->template->setTemplateOverride(
+        //     'action/index',
+        //     'pluginNameExampleStudlyCaps:action/index'
+        // );
 
-        // Extra Page - Routes
-        //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
-        //  - Must have the corresponding action in the matching controller
-        $this->route->addRoute('/ / ', ' ', ' ', 'PluginNameExampleStudlyCaps');
-
-        // Helper
-        //  - Example: $this->helper->register('helperClassNameCamelCase', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\HelperNameExampleStudlyCaps');
-        //  - Add each Helper in the 'use' section at the top of this file
-        $this->helper->register('myHelper', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\MyHelper');
+        // Template hooks must also point to an existing plugin template. Keep the
+        // example disabled until Template/project_header/actions.php is created.
+        // $this->template->hook->attach(
+        //     'template:project-header:view-switcher-before-project-overview',
+        //     'pluginNameExampleStudlyCaps:project_header/actions'
+        // );
     }
 
     public function onStartup()
@@ -49,33 +62,37 @@ class Plugin extends Base
 
     public function getPluginName()
     {
-        // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions - do not translate the plugin name here
+        // Keep this value identical to the namespace and installed directory name.
+        // Kanboard's Plugin Directory relies on the exact, case-sensitive value.
         return 'PluginNameExampleStudlyCaps';
     }
 
     public function getPluginDescription()
     {
-        return t('description text');
+        return t('A safe starting point for a Kanboard plugin.');
     }
 
     public function getPluginAuthor()
     {
-        return '';
+        // Replace this placeholder before publishing the generated plugin.
+        return 'Plugin Author';
     }
 
     public function getPluginVersion()
     {
+        // Start generated plugins at a valid semantic version.
         return '1.0.0';
     }
 
     public function getCompatibleVersion()
     {
-        // Examples: '>=1.0.37' '<1.0.37' '<=1.0.37'
-        return '>=1.2.32';
+        // This template is tested against Kanboard 1.2.54 and PHP 8.2 to 8.5.
+        return '>=1.2.54';
     }
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/url';
+        // Replace this placeholder with the generated plugin's canonical homepage.
+        return 'https://example.com/plugin-homepage';
     }
 }

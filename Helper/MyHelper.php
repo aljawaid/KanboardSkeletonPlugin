@@ -1,50 +1,45 @@
 <?php
 
+/**
+ * Provides small reusable helpers for the example plugin templates.
+ *
+ * Related regression test: tests/HelperTest.php.
+ */
+
 namespace Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper;
 
 use Kanboard\Core\Base;
 
-/**
- * Plugin PluginNameExampleStudlyCaps
- * Class MyHelper
- *
- * @package  Plugin\PluginNameExampleStudlyCaps\Helper
- * @author   
- */
 class MyHelper extends Base
 {
     /**
-     * Get SVG Icons for Inline Markup and CSS Styling (Embed SVG Fly Method)
+     * Read a plugin-owned SVG for trusted inline presentation.
      *
-     * Include filename as class inside SVG file
-     * Set 'color' as 'currentColor' to use CSS or define a color
-     * Style using normal CSS
-     * @uses    $this->helper->supportHelper->embedSVGIcon('icon-filename-without-extension')
-     * @var     $svgFilename
-     * @return  svg
-     * @author  Erik Moberg https://www.erikmoberg.net/article/embed-svg-icons-in-html-with-php
-     * @author  aljawaid
+     * Keep icon filenames to letters, numbers, dashes and underscores. Set SVG
+     * colours to currentColor so Kanboard's light, dark and forced-colour modes
+     * remain usable. Missing or invalid icons return an empty string so a page can
+     * still render without generating a file warning.
+     *
+     * Example: $this->helper->myHelper->embedSvgIcon('example').
+     *
+     * @param mixed $iconFilename Filename without the .svg extension.
+     *
+     * @return string
      */
-    public function embedSVGIcon($icon_filename)
+    public function embedSvgIcon($iconFilename)
     {
-        if ($this->router->getPlugin()) {
-            // For plugin templates
-            return file_get_contents('plugins/' . $this->helper->app->getPluginName() . '/Assets/icons/' . $icon_filename . '.svg');
-        } else {
-            // For core templates
-            return file_get_contents('plugins/PluginNameExampleStudlyCaps/Assets/icons/' . $icon_filename . '.svg');
+        if (!is_string($iconFilename) || preg_match('/\A[a-zA-Z0-9_-]+\z/', $iconFilename) !== 1) {
+            return '';
         }
-    }
 
-    /**
-     * Summary
-     *
-     * @return   void
-     * @see      core-template.php
-     * @author 
-     */
-    public function testFunction()
-    {
-        return true;
+        $iconPath = dirname(__DIR__) . '/Assets/icons/' . $iconFilename . '.svg';
+
+        if (!is_file($iconPath) || !is_readable($iconPath)) {
+            return '';
+        }
+
+        $svg = file_get_contents($iconPath);
+
+        return $svg === false ? '' : $svg;
     }
 }

@@ -1,39 +1,19 @@
-<!-- REMOVE THIS SECTION -->
-<!-- ------------------- -->
-<!-- TEMPLATE FILE FOR LOCAL TRANSLATIONS - KEEP FILENAME IN LOWERCASE AS translations.php UNDER LANGUAGE CODE -->
-<!-- EXAMPLE FILE: /Locale/en_GB/translations.php -->
-<!-- EXAMPLE FILE: /Locale/en_US/translations.php -->
-<!-- EXAMPLE FILE: /Locale/fr_FR/translations.php -->
-<!-- EXAMPLE FILE: /Locale/de_DE/translations.php -->
-<!-- ------------------- -->
-<!-- REMOVE THIS SECTION -->
 <?php
 
+/**
+ * Provides a copy-ready translation map for a new locale.
+ *
+ * Copy this file to Locale/<language_code>/translations.php, translate the values
+ * and remove this guidance from the copied file. Keep source strings identical to
+ * the strings passed to Kanboard's t() function.
+ */
+
 return array(
-    //
-    // GENERAL
-    //
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    //
-    // CORE OVERRIDES OR 3RD PARTY PLUGIN TRANSLATIONS AFFECTING THIS PLUGIN
-    //
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+    'A safe starting point for a Kanboard plugin.' => '',
+    'Plugin settings example' => '',
+    'Your plugin template is connected.' => '',
+    'About this example' => '',
+    'This starter page confirms that the controller, template, helper, translations ' .
+        'and theme-aware assets load together.' => '',
+    'Replace this example with your plugin settings before publishing.' => '',
 );
