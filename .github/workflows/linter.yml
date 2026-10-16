@@ -1,5 +1,5 @@
 ---
-name: Code Scan
+name: Code Quality
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   lint:
-    name: Check Code
+    name: Lint Code
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
@@ -38,8 +38,11 @@ jobs:
           SUPPRESS_POSSUM: true
           VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_GITLEAKS: true
+          # Security scanning is intentionally kept outside this feature-quality workflow.
+          VALIDATE_HTML: true
+          VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_JSON: true
           VALIDATE_MARKDOWN: true
           VALIDATE_PHP_BUILTIN: true
+          VALIDATE_PHP_PHPCS: true
           VALIDATE_YAML: true
