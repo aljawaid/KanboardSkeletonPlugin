@@ -1,0 +1,17 @@
+---
+# Set Update Schedule for GitHub Actions
+
+version: 2
+updates:
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
+      time: "09:00"
+      # Use Europe/London local time, including daylight-saving changes
+      timezone: "Europe/London"
+    # Add assignees
+    assignees:
+      - "aljawaid"
