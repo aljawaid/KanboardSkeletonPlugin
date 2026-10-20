@@ -27,12 +27,13 @@ jobs:
           persist-credentials: false
 
       - name: Lint changed files
-        uses: github/super-linter/slim@b807e99ddd37e444d189cfd2c2ca1274d8ae8ef1 # v7
+        uses: super-linter/super-linter/slim@2da136927bd4a73596db63044b504547c62cb854 # v9.0.0
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CSS_FILE_NAME: .stylelintrc.json
+          CSS_FILE_NAME: stylelint.config.mjs
+          JAVASCRIPT_ES_CONFIG_FILE: eslint.config.mjs
           LINTER_RULES_PATH: .github/linters
           IGNORE_GITIGNORED_FILES: true
           SUPPRESS_POSSUM: true
